@@ -2,7 +2,6 @@
   "name": "the-moon",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3003",
   "dependencies": {
     "@fontsource/kalam": "^4.5.9",
     "@fontsource/noto-sans": "^4.5.11",
