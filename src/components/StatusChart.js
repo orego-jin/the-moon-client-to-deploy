@@ -109,7 +109,7 @@ const Value = styled.div`
 
 `
 
-const StatusChart = ({backendData}) => {
+const StatusChart = ({totalDistance}) => {
 
   const ref = useRef();
   
@@ -142,7 +142,7 @@ const StatusChart = ({backendData}) => {
       <p className="before">0</p>
 
       <BackgroundCircle>
-        <Value className="value" ref={ref} sum={backendData}><span>{backendData}</span></Value>
+        <Value className="value" ref={ref} sum={totalDistance}><span>{totalDistance}</span></Value>
       </BackgroundCircle>
       
       <p className="after">33</p>

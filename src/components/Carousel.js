@@ -1,10 +1,16 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef } from 'react';
 import styled from 'styled-components';
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-cards";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/effect-cards";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+import "swiper/swiper.min.css";
+import "swiper/modules/effect-cards/effect-cards.min.css";
+
 import Arrow from '../assets/arrow.png';
 
 import { Pagination, Navigation, EffectCards } from "swiper";
@@ -85,7 +91,7 @@ const Carousel = ({selectedSlide}) => {
     // console.log("go to slide", num);
     console.log(selectedSlide)
 
-    swiperRef.current?.swiper.slideTo(selectedSlide);
+    swiperRef.current?.swiper.slideTo(Number(selectedSlide));
   };
 
   const currSlide = swiperRef.current?.swiper.activeIndex;

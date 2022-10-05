@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { BarChart, Bar, Tooltip, CartesianGrid, XAxis, YAxis } from 'recharts';
 
-// const data = [
+// import fetcher from '../lib/fetcher';
+// import useSWR from 'swr';
+
+// const staticData = [
 //   {startDate: '2022/09/18', distance: 3},
 //   {startDate: '2022/09/19', distance: 5},
 //   {startDate: '2022/09/20', distance: 9}
@@ -46,30 +49,18 @@ const CustomTooltip = ({ active, payload, label }) => {
         <p className="payload">{`${payload[0].value} km`}</p>
       </div>
     );
-  }
+  };
 
   return null;
 };
 
-const Records = () => {
-
-  const [backendData, setBackendData] = useState([]);
-
-  useEffect(()=> {
-      fetch("http://localhost:3003/api/records")
-      .then(
-        res => res.json())
-      .then(
-        data => {setBackendData(data);}
-      )
-  }, [])
-
+const Records = ({stravaData}) => {
   
   return (
     <Section id="records">
       <Title>Records for the 1st Stop</Title>
       <Box>
-        <BarChart width={730} height={250} data={backendData}>
+        <BarChart width={730} height={250} data={stravaData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="startDate" />
           <YAxis dataKey="distance" label={{ value: 'distance', position: 'left' }} />

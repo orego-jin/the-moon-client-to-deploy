@@ -18,8 +18,10 @@ const Text = styled.h2`
   }
 `
 
-const StatusText = ({backendData}) => {
-  const remainingDistance = 33 - backendData;
+const StatusText = ({totalDistance}) => {
+
+  const remainingDistance = (33 - Number(totalDistance));
+
   console.log('Distance Left:', remainingDistance);
   return (
     <Text><span class="distance">{remainingDistance}km</span> away from the 

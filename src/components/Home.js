@@ -37,7 +37,7 @@ const StopContainer= styled.div`
 `
 
 const Home = ({setSelectedSlide}) => {
-
+  
   const slideSetter = (i) => {
     // console.log('Clicked!')
     setSelectedSlide(i);

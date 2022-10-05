@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import StatusText from './StatusText';
 import StatusChart from './StatusChart';
 
@@ -33,27 +33,29 @@ const Box = styled.div`
 //   color: #444;
 // `
 
-const Status = () => {
+const Status = ({totalDistance}) => {
 
-  const [backendData, setBackendData] = useState(null);
+  // const [backendData, setBackendData] = useState(null);
 
-  useEffect(()=> {
-      fetch("http://localhost:3003/api/sum")
-      .then(
-        res => res.json())
-      .then(
-        data => {setBackendData(data); console.log('sum received:', data)}
-      )
-  }, [])
+  // useEffect(()=> {
+  //     fetch("http://localhost:3003/api/sum")
+  //     .then(
+  //       res => res.json())
+  //     .then(
+  //       data => {setBackendData(data); console.log('sum received:', data)}
+  //     )
+  // }, [])
+
+  console.log('from status.js', totalDistance)
 
   return (
   <Section id="status">
     <Container>
       <Box>
-        <StatusText backendData={backendData}/>
+        <StatusText totalDistance={totalDistance}/>
       </Box>
       <Box>
-        <StatusChart backendData={backendData}/>
+        <StatusChart totalDistance={totalDistance}/>
       </Box>
     </Container>  
   </Section>
