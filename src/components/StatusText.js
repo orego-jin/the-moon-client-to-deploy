@@ -24,7 +24,7 @@ const StatusText = ({totalDistance}) => {
 
   console.log('Distance Left:', remainingDistance);
   return (
-    <Text><span class="distance">{remainingDistance}km</span> away from the 
+    <Text><span className="distance">{remainingDistance}km</span> away from the 
       <Typewriter
         options={{autoStart: true,
           loop: true}}

@@ -91,7 +91,7 @@ const Carousel = ({selectedSlide}) => {
     // console.log("go to slide", num);
     console.log(selectedSlide)
 
-    swiperRef.current?.swiper.slideTo(Number(selectedSlide));
+    swiperRef.current?.swiper.slideTo(Number(selectedSlide)-1);
   };
 
   const currSlide = swiperRef.current?.swiper.activeIndex;
@@ -110,7 +110,7 @@ const Carousel = ({selectedSlide}) => {
         pagination={{
           type:'fraction'
         }}
-        loop={true}
+        loop={false}
         navigation={true}
         scrollbar={{
           draggable:true

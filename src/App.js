@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import GlobalStyles from './styles/GlobalStyles';
 import { ThemeProvider } from 'styled-components';
 import Navigation from './components/Navigation';
@@ -41,8 +41,10 @@ function sumCalculator( data ) {
 
 function App() {
 
-  const [stravaData, setStravaData] = useState(null);
+  // const [stravaData, setStravaData] = useState();  
   const [totalDistance, setTotalDistance] = useState(null);
+  const stravaData = useRef(0);
+  // const totalDistance = useRef(0);
   const [selectedSlide, setSelectedSlide] = useState(null);
 
   console.log('initial data',stravaData)
@@ -97,13 +99,15 @@ function App() {
        {
         console.log('received result',data);
         const sum = sumCalculator(data).toFixed(1);
-        setStravaData(data);
+        // setStravaData(data);
+        stravaData.current = data;
         setTotalDistance(sum);
+        // totalDistance.current = sum;
         // console.log(stravaData);
      })
     }
 
-  }, [])
+  }, []) 
   
 
   return (
@@ -114,7 +118,7 @@ function App() {
         <Home setSelectedSlide={setSelectedSlide}/>
         <Album selectedSlide={selectedSlide}/>
         <Status totalDistance = {totalDistance}/>
-        <Records stravaData = {stravaData}/>
+        <Records stravaData = {stravaData.current}/>
         <Footer />
         <ScrollToTop />
       </ThemeProvider>
