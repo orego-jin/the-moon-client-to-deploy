@@ -13,7 +13,7 @@ export const main = {
   // fontxs: '0.75em',
   fontsm: '.875em',
   fontmd: '1em', // 1em = 16px;
-  fontlg: '1.25em',
+  fontlg: '2em',
   fontxl: '2.5em',
   fontxxl: '3em',
   fontxxxl: '4em',

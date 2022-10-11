@@ -47,13 +47,7 @@ const Container = styled.div`
     }
 
     @media(max-width:64rem){
-      width: 2.6rem;
-    }
-    @media(max-width: 30rem){
-      background-image: none;
-      &:after {
-        display: inline;
-      }
+   
     }
   }
 
@@ -72,14 +66,7 @@ const Container = styled.div`
     }
     
     @media(max-width:64rem){
-      width: 2.6rem;
-    }
-    @media(max-width:30rem){
-      background-image: none;
-      &:after {
-        display: inline;
-        transform: rotate(180deg);
-      }
+
     }
   }
 `
@@ -137,15 +124,15 @@ const Carousel = ({selectedSlide}) => {
         className="mySwiper"
         ref={swiperRef}
       >
-        <SwiperSlide><Box>Slide1</Box><Box>2</Box></SwiperSlide>
-        <SwiperSlide><Box>Slide1</Box><Box><NotReached>Not Reached Yet! </NotReached></Box></SwiperSlide>
-        <SwiperSlide><Box>Slide1</Box><Box>2</Box></SwiperSlide>
-        <SwiperSlide><Box>Slide1</Box><Box>2</Box></SwiperSlide>
-        <SwiperSlide><Box>Slide1</Box><Box>2</Box></SwiperSlide>
-        <SwiperSlide><Box>Slide1</Box><Box>2</Box></SwiperSlide>
-        <SwiperSlide><Box>Slide1</Box><Box>2</Box></SwiperSlide>
-        <SwiperSlide><Box>Slide1</Box><Box>2</Box></SwiperSlide>
-        <SwiperSlide><Box>Slide1</Box><Box>2</Box></SwiperSlide>
+        <SwiperSlide><Box>Slide1</Box><Box>1</Box></SwiperSlide>
+        <SwiperSlide><Box>Slide2</Box><Box>2</Box></SwiperSlide>
+        <SwiperSlide><Box>Slide3</Box><Box>3</Box></SwiperSlide>
+        <SwiperSlide><Box>Slide4</Box><Box>4</Box></SwiperSlide>
+        <SwiperSlide><Box>Slide5</Box><Box>5</Box></SwiperSlide>
+        <SwiperSlide><Box>Slide6</Box><Box>6</Box></SwiperSlide>
+        <SwiperSlide><Box>Slide7</Box><Box>7</Box></SwiperSlide>
+        <SwiperSlide><Box>Slide8</Box><Box>8</Box></SwiperSlide>
+        <SwiperSlide><Box>Slide9</Box><Box>9</Box></SwiperSlide>
       </Swiper>
     </Container>
   )

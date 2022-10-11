@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import BackgroundVideo from './BackgroundVideo';
-import Earth from './Earth';
+import Moon from './Moon';
 import Stops from './Stops';
 
 const Section = styled.section`
@@ -10,6 +10,7 @@ const Section = styled.section`
   position: relative;
   background-color: ${props => props.theme.body};
   
+  overflow: hidden;
 `
 
 const Container = styled.div`
@@ -20,7 +21,7 @@ const Container = styled.div`
     display: flex;
   }
 `
-const EarthContainer = styled.div`
+const MoonContainer = styled.div`
   position: absolute;
   top: 5rem;
   width: 50%;
@@ -61,9 +62,9 @@ const Home = ({setSelectedSlide}) => {
     <Section id="home">
       
       <Container>
-        <EarthContainer>
-          <Earth /> 
-        </EarthContainer>
+        <MoonContainer>
+          <Moon /> 
+        </MoonContainer>
         <StopContainer>
           <Stops text={9} link={slideSetter}/>
           <Stops text={8} link={slideSetter}/>

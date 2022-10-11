@@ -23,11 +23,11 @@ const Text = styled.h2`
     font-size: ${props => props.theme.fontxl};
   }
   
-  // @media (max-width: 30em) {
-  //   width: 100%;
-  //   text-align: center;
-  //   font-size: ${props => props.theme.fontxl};
-  // }
+  @media (max-width: 30em) {
+    width: 100%;
+    text-align: center;
+    font-size: ${props => props.theme.fontlg};
+  }
 
 `
 

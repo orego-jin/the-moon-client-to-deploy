@@ -28,23 +28,26 @@ const Menu = styled.ul`
   align-items; center;
   list-style: none;
 
-  @media(max-width: 64em) {
-  //   position: fixed;
-  //   top: ${props => props.theme.navHeight};
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   width: 100vw;
-  //   height: ${props => `calc(100vh - ${props.theme.navHeight})`};
-  //   z-index: 130;
-  //   background-color: ${props => `rgba(${props.theme.body}, 0.85)`};
+  @media(max-width: 64em){
+    position: fixed;
+    top: ${props => props.theme.navHeight};
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: ${props => `calc(100vh - ${props.theme.navHeight})`};
+    z-index: 130;
+    background-color: rgba(0,0,0,0.5);
+    
 
-  //   flex-direction: column;
-  //   align-items: center;
-  //   justify-content: center;
+    transform: ${props => props.click? 'translateY(0)' : 'translateY(100%)'};
+    transition: all 0.3s ease;
 
-  //   backdrop-filter: blur(2px); 
-    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    backdrop-filter : blur(2px); 
   }
   
 `
@@ -52,8 +55,7 @@ const MenuItems = styled.li`
   margin: 0 1rem;
   cursor: pointer;
   color: ${props => props.theme.text};
-  font-size: ${props => props.theme.fontlg};
-  // font-weight: bold;
+  font-size: 22px;
 
   &::after {
     content: ' ';
@@ -67,6 +69,15 @@ const MenuItems = styled.li`
   &:hover::after {
     width: 100%;
   }
+
+  @media(max-width: 64em) {
+    margin: 1rem 0;
+    &::after {
+      display: none;
+    }
+    color: white;
+  }
+
 `
 const HamburgerMenu = styled.span`
    width: ${props => props.click? '2rem' : '1.5rem'};
@@ -96,6 +107,8 @@ const HamburgerMenu = styled.span`
     right: ${props => props.click? '-2px': '0'};
     background: ${props => props.theme.text};
     position: absolute ;
+    transition: all 0.3s ease;
+
   }
 
   &::after {
@@ -121,6 +134,7 @@ const Navigation = () => {
       block: 'start',
       inline: 'nearest'
     })
+    setClick(!click);
   }
   
   return (
@@ -130,7 +144,7 @@ const Navigation = () => {
         <HamburgerMenu click = { click } onClick = {() => setClick( !click )}>
           &nbsp;
         </HamburgerMenu>
-        <Menu>
+        <Menu click={click}>
           <MenuItems onClick={ () => scrollTo('home') }>Home</MenuItems>
           <MenuItems onClick={ () => scrollTo('album') }>Album</MenuItems>
           <MenuItems onClick={ () => scrollTo('status') }>Status</MenuItems>

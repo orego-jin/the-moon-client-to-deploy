@@ -24,30 +24,31 @@ const Section = styled.section`
   align-items: center;
 
   @media(max-width: 64rem) {
-    min-height: 45vh;
+    min-height: 40vh;
   }
 `
 
 const Title = styled.h2`
   text-align: center;
-  margin: 2rem;
+  margin-top: 3rem;
   padding: 1rem;
   text-transform: capitalize;
-  font-size: ${props => props.theme.fontxl};
+  font-size: ${props => props.theme.fontxxl};
   color: ${props => props.theme.text};
 
   @media(max-width:30em) {
-    margin: 1.5rem;
-    font-size: ${props => props.theme.fontxl};
-    
+    margin-top: 1.5rem;
+    font-size: ${props => props.theme.fontlg}; 
+    span {
+      display: inline-block;
+    }
   }
 `
 
 const Box = styled.div`
-  width: 65vw;
-  height: 10%;
+  width: 70vw;
   display: flex;
-  margin: auto 0;
+  margin: 5rem 0;
   margin-right: 2.5rem;
   
   justify-content: center;
@@ -61,10 +62,16 @@ const Box = styled.div`
 
   @media (max-width: 64rem) {
     width: 85vw;
+    margin: 3rem 0;
+    margin-right: 2.5rem;
+
   }
 
   @media (max-width: 30rem) {
-    width: 95vw;
+    width: 97vw;
+    margin: 1.5rem 0;
+    margin-right: 2.5rem;
+
   }
 
 `
@@ -86,7 +93,7 @@ const Records = ({stravaData}) => {
   
   return (
     <Section id="records">
-      <Title>Records for the 1st Stop</Title>
+      <Title>Records for the <span>1st Stop</span></Title>
       <Box>
         <ResponsiveContainer width="99%" aspect={4.0/1.5}>
           {/* <BarChart width={730} height={250} data={stravaData}> */}

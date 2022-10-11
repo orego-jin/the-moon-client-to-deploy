@@ -37,6 +37,21 @@ const Up = styled.div`
   }
 
   z-index: 100;
+
+  @media(max-width: 64rem) {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: ${props => props.theme.fontlg};
+
+  }
+
+  @media(max-width: 30rem) {
+    width: 2rem;
+    height: 2rem;
+    // font-size: ${props => props.theme.fontmd};
+    font-size: 20px;
+  }
+
 `
 
 const ScrollToTop = () => {

@@ -16,6 +16,8 @@ const Section = styled.section`
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
   }
+
+  overflow: hidden;
 `
 
 const Container = styled.div`

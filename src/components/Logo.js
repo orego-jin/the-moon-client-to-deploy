@@ -8,14 +8,14 @@ const LogoText = styled.h1`
   color: ${props => props.theme.text};
   transition: all 0.2s ease;
   &:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   @media(max-width: 64em) {
     font-size: ${props => props.theme.fontxl};
   }
   @media(max-width: 30em) {
-    font-size: ${props => props.theme.fontlg};
+    font-size: 24px;
   }
 `
 
