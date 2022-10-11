@@ -10,13 +10,20 @@ const LogoText = styled.h1`
   &:hover{
     transform: scale(1.1);
   }
+
+  @media(max-width: 64em) {
+    font-size: ${props => props.theme.fontxl};
+  }
+  @media(max-width: 30em) {
+    font-size: ${props => props.theme.fontlg};
+  }
 `
 
 const Logo = () => {
   return (
     <LogoText>
       <a href="/">
-        the moon
+        running to the moon
       </a>
      </LogoText>
   )

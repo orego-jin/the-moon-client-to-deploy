@@ -1,4 +1,4 @@
-import React, {useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
@@ -45,6 +45,16 @@ const Container = styled.div`
     &:after {
       display: none;
     }
+
+    @media(max-width:64rem){
+      width: 2.6rem;
+    }
+    @media(max-width: 30rem){
+      background-image: none;
+      &:after {
+        display: inline;
+      }
+    }
   }
 
   .swiper-button-prev {
@@ -59,6 +69,17 @@ const Container = styled.div`
 
     &:after {
       display: none;
+    }
+    
+    @media(max-width:64rem){
+      width: 2.6rem;
+    }
+    @media(max-width:30rem){
+      background-image: none;
+      &:after {
+        display: inline;
+        transform: rotate(180deg);
+      }
     }
   }
 `
@@ -81,16 +102,12 @@ const NotReached = styled.div`
   font-weight: 700;
 `
 
-
 const Carousel = ({selectedSlide}) => {
+  
   const swiperRef = useRef(null);
 
-  // useEffect(() => {}, []);
-
   const toSlide = () => {
-    // console.log("go to slide", num);
     console.log(selectedSlide)
-
     swiperRef.current?.swiper.slideTo(Number(selectedSlide)-1);
   };
 
@@ -99,7 +116,6 @@ const Carousel = ({selectedSlide}) => {
   if (currSlide !== selectedSlide) {
     toSlide();
   }
-
 
   return(
     <Container>

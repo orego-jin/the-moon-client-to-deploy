@@ -9,11 +9,16 @@ const Section = styled.section`
   min-height: ${props => `calc(100vh - ${props.theme.navHeight})` };
   position: relative;
   background-color: ${props => props.theme.body};
+  
 `
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
+
+  @media (max-width: 64em){
+    display: flex;
+  }
 `
 const EarthContainer = styled.div`
   position: absolute;
@@ -22,6 +27,10 @@ const EarthContainer = styled.div`
   // transform: translate(-50%, 0);
   z-index: 2;
   // background-color: blue;
+
+  @media (max-width: 64em){
+    width: 100%;
+  }
 `
 
 const StopContainer= styled.div`
@@ -34,6 +43,10 @@ const StopContainer= styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 64em){
+    width: 100%;
+  }
 `
 
 const Home = ({setSelectedSlide}) => {

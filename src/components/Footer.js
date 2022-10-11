@@ -17,6 +17,14 @@ const Section = styled.section`
 
   position: relative;
 
+  @media (max-width: 64rem) {
+    min-height: 20vh;
+  }
+
+  @media (max-width: 30rem) {
+    min-height: 15vh;
+  }
+
 `
 const Container = styled.div`
   width: 80%;
@@ -26,6 +34,11 @@ const Container = styled.div`
   align-items: center;
 
   border-bottom: 1px solid ${props => props.theme.text};
+
+  @media (max-width: 64rem) {
+    width: 90%;
+    margin: 1.2rem auto;
+  }
 `
 
 const Right = styled.div`
@@ -46,6 +59,11 @@ const IconList = styled.div`
     &:hover {
       transform: scale(1.2);
     }
+  }
+
+  @media (max-width: 30rem) {
+    &>*{
+      padding-right: 0.5rem;
   }
 `
 
@@ -81,21 +99,24 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
 
+  @media (max-width: 64rem) {
+    width: 90%;
+  }
+`
 
 const Footer = () => {
   return (
     <Section>
       <Container>
-          <Logo />
+        <Logo />
         <Right>
           <IconList>
-            <a href="" target="_blank" rel="">
+            <a href="https://www.instagram.com/running2themoon/" target="_blank" rel="noopener">
             <Instagram />
             </a>
 
-            <a href="" target="_blank" rel="">
+            <a href="https://twitter.com/running2themoon" target="_blank" rel="noopener">
             <Twitter />
             </a>
 

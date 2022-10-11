@@ -11,6 +11,13 @@ const VideoContainer = styled.div`
     height: auto;
   }
   z-index: -3;
+
+  @media (max-width: 64em) {
+    video {
+      width: auto;
+      height: 100%;
+    }
+  }
 `
 
 const BackgroundVideo = () => {

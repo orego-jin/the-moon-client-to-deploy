@@ -1,6 +1,6 @@
 import {React, useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useWindowScroll } from 'react-use';
+// import { useWindowScroll } from 'react-use';
 
 // const data = [
 //   {name: "Total Distance", value: 20}
@@ -35,6 +35,16 @@ const BackgroundCircle = styled.div`
   list-style-type: none;
   position: relative;
   overflow: hidden;
+
+  @media (max-width:64em) {
+    width: 310px;
+    height: 155px;
+  }
+
+  @media (max-width:30em) {
+    width: 270px;
+    height: 135px;
+  }
 
   ::before {
     content: 'b';
@@ -87,26 +97,26 @@ const Value = styled.div`
   align-items: bottom;
   color: ${props => props.theme.body};
 
+  @media (max-width:64em) {
+    border: 100px solid ${props => props.theme.themeColor};
+    border-top: none;
+    border-bottom-left-radius: 175px;
+    border-bottom-right-radius: 175px;
+  }
+
+  @media (max-width:30em) {
+    border: 83px solid ${props => props.theme.themeColor};
+    border-top: none;
+    border-bottom-left-radius: 175px;
+    border-bottom-right-radius: 175px;
+  }
+
   span {
-    // transform: rotateZ(-105deg);
     transform: rotateZ(-${props => props.sum * 180 / 33}deg);
     font-size: ${props => props.theme.fontmd};
     position: absolute;
-    // right: 190px;
     left:30px;
   }
-
-  .scrolled {
-    color: blue;
-
-    // animation: chartAni1 1s linear 1 forwards;
-
-    // @keyframes chartAni1{
-    //   0%{transform: rotateZ(0deg);}
-    //   100%{transform: rotateZ(105deg)}
-    // }  
-  }
-
 `
 
 const StatusChart = ({totalDistance}) => {
@@ -139,13 +149,13 @@ const StatusChart = ({totalDistance}) => {
 
   return(
     <Container>
-      <p className="before">0</p>
+      {/* <p className="before">0</p> */}
 
       <BackgroundCircle>
         <Value className="value" ref={ref} sum={totalDistance}><span>{totalDistance}</span></Value>
       </BackgroundCircle>
       
-      <p className="after">33</p>
+      {/* <p className="after">33</p> */}
     </Container>
   )
 }

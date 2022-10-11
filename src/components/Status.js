@@ -13,9 +13,16 @@ const Container = styled.div`
   width: 75%;
   min-height: 60vh;
   margin: 0 auto;
+
   display: flex;
   justify-content: center;
   align-items: center; 
+
+  @media(max-width:64em) {
+    flex-direction: column;
+    min-height: 50vh;
+  }
+  
 `
 const Box = styled.div`
   width: 50%;
@@ -25,6 +32,12 @@ const Box = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media(max-width:64em) {
+    width: 100%;
+    margin: 1.5rem;
+  }
+
 `
 // const Records = styled.ul`
 //   list-style: none;
@@ -34,17 +47,6 @@ const Box = styled.div`
 // `
 
 const Status = ({totalDistance}) => {
-
-  // const [backendData, setBackendData] = useState(null);
-
-  // useEffect(()=> {
-  //     fetch("http://localhost:3003/api/sum")
-  //     .then(
-  //       res => res.json())
-  //     .then(
-  //       data => {setBackendData(data); console.log('sum received:', data)}
-  //     )
-  // }, [])
 
   console.log('from status.js', totalDistance)
 

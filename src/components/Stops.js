@@ -37,6 +37,20 @@ const Stop = styled.button`
     transform: translate(-50%, -50%) scale(1);  
     padding: 0.3rem;
   }
+
+  @media (max-width: 64em) {
+  font-size: ${props => props.theme.fontxs};
+  padding: 0.7rem 0.9rem;
+  margin: 0.5rem;
+  }
+
+  @media (max-width: 30em) {
+    // overflow: visible;
+  font-size: ${props => props.theme.fontxs};
+  padding: 0.4rem 0.6rem;
+  margin: 0.5rem;
+  }
+
 `
 
 const Stops = ({text, link}) => {
@@ -59,13 +73,7 @@ const Stops = ({text, link}) => {
           }
         }
     >
-      {/* <a 
-        href = {link} 
-        aria-label={text} 
-        // target="_blank" rel="noreferrer"
-      > */}
       {text}
-      {/* </a> */}
     </Stop>
   )
 }
