@@ -80,7 +80,7 @@ const MenuItems = styled.li`
 
 `
 const HamburgerMenu = styled.span`
-   width: ${props => props.click? '2rem' : '1.5rem'};
+   width: 2rem;
    height: 2px;
    background: ${props => props.theme.text};
 
@@ -102,9 +102,8 @@ const HamburgerMenu = styled.span`
 
   &::after, &::before {
     content: ' ';
-    width: ${props => props.click? '1rem': '1.5rem'};
+    width: 2rem;
     height: 2px;
-    right: ${props => props.click? '-2px': '0'};
     background: ${props => props.theme.text};
     position: absolute ;
     transition: all 0.3s ease;
@@ -112,13 +111,11 @@ const HamburgerMenu = styled.span`
   }
 
   &::after {
-    top: ${props => props.click ? '0.3rem': '0.5rem'};
-    transform: ${props => props.click? 'rotate(-40deg)': 'rotate(0)'};
+    top: 0.6rem;
   }
 
   &::before {
-    bottom: ${props => props.click ? '0.3rem': '0.5rem'};
-    transform: ${props => props.click? 'rotate(40deg)': 'rotate(0)'};
+    bottom: 0.6rem;
   }
 `
 

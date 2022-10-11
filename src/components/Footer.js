@@ -81,7 +81,7 @@ const Bottom = styled.div`
   @media (max-width: 64rem) {
     width: 90%;
     font-size: ${props => props.theme.fontsm};
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
   }
   
 `

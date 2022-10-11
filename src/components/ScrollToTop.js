@@ -45,13 +45,6 @@ const Up = styled.div`
 
   }
 
-  @media(max-width: 30rem) {
-    width: 2rem;
-    height: 2rem;
-    // font-size: ${props => props.theme.fontmd};
-    font-size: 20px;
-  }
-
 `
 
 const ScrollToTop = () => {
