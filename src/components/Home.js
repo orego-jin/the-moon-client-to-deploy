@@ -60,7 +60,6 @@ const Home = ({setSelectedSlide}) => {
 
   return (
     <Section id="home">
-      
       <Container>
         <MoonContainer>
           <Moon /> 

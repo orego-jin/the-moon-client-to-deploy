@@ -57,17 +57,24 @@ const MenuItems = styled.li`
   color: ${props => props.theme.text};
   font-size: 22px;
 
-  &::after {
-    content: ' ';
-    display: block;
-    width: 0%;
-    height: 2px;
-    background: ${props => props.theme.text}; 
-    transition: width 0.3s ease;
-  }
+  // &::after {
+  //   content: ' ';
+  //   display: block;
+  //   width: 0%;
+  //   height: 3px;
+  //   // background: ${props => props.theme.text}; 
+  //   background: ${props => props.theme.carouselColor};
+  //   transition: width 0.3s ease;
+  // }
 
-  &:hover::after {
-    width: 100%;
+  // &:hover::after {
+  //   width: 100%;
+  // }
+
+  transition: all 0.3s ease;
+
+  &:hover{
+    color: ${props => props.theme.carouselColor};
   }
 
   @media(max-width: 64em) {
@@ -85,7 +92,7 @@ const HamburgerMenu = styled.span`
    background: ${props => props.theme.text};
 
    position: absolute;
-   top: 3rem;
+   top: 2.5rem;
    left: 90%;
    transform: ${props => props.click ? 'translateX(-50%) rotate(90deg)' : 'translateX(-50%) rotate(0)'};
    
@@ -105,9 +112,8 @@ const HamburgerMenu = styled.span`
     width: 2rem;
     height: 2px;
     background: ${props => props.theme.text};
-    position: absolute ;
+    position: absolute;
     transition: all 0.3s ease;
-
   }
 
   &::after {
@@ -143,6 +149,7 @@ const Navigation = () => {
         </HamburgerMenu>
         <Menu click={click}>
           <MenuItems onClick={ () => scrollTo('home') }>Home</MenuItems>
+          <MenuItems onClick={ () => scrollTo('story') }>Story</MenuItems>
           <MenuItems onClick={ () => scrollTo('album') }>Album</MenuItems>
           <MenuItems onClick={ () => scrollTo('status') }>Status</MenuItems>
           <MenuItems onClick={ () => scrollTo('records') }>Records</MenuItems>

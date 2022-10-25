@@ -6,9 +6,9 @@ import Twitter from '../assets/Twitter';
 import Opensea from '../assets/Opensea';
 
 const Section = styled.section`
+  width: 100%;
   background-color: ${props => props.theme.footerColor};
 
-  width: 100vw;
   min-height: 25vh;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@ const Section = styled.section`
 
 `
 const Container = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 2rem auto;
   display: flex;
   justify-content: space-between;
@@ -71,7 +71,7 @@ const IconList = styled.div`
 
 
 const Bottom = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -88,7 +88,7 @@ const Bottom = styled.div`
 
 const Footer = () => {
   return (
-    <Section>
+    <Section id="footer">
       <Container>
         <Logo />
         <Right>

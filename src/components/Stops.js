@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Stop = styled.button`
+  font-family: "Noto Sans", sans-serif;
   display: inline-block;
   background-color: ${props => props.theme.stopReached};
   color: ${props => props.theme.text};
   font-size: ${props => props.theme.fontsm};
   outline: none;
   border: none;
+  border: 1.5px solid black;
   padding: 0.9rem 1.1rem;
   margin: 0.5rem;
 
@@ -26,7 +28,7 @@ const Stop = styled.button`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);  
-    border: 2px solid ${props => props.theme.stopReached};
+    border: 2px solid ${props => props.theme.stopNotReached};
     width: 100%;
     height: 100%;
     border-radius: 50px;
@@ -45,10 +47,9 @@ const Stop = styled.button`
   }
 
   @media (max-width: 30em) {
-    // overflow: visible;
   font-size: ${props => props.theme.fontxs};
   padding: 0.4rem 0.6rem;
-  margin: 0.5rem;
+  margin: 0.35rem;
   }
 
 `

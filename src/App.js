@@ -3,6 +3,7 @@ import GlobalStyles from './styles/GlobalStyles';
 import { ThemeProvider } from 'styled-components';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
+import Story from './components/Story';
 import Album from './components/Album';
 import Status from './components/Status';
 import Records from './components/Records';
@@ -115,6 +116,7 @@ function App() {
       <ThemeProvider theme={main}>
         <Navigation />
         <Home setSelectedSlide={setSelectedSlide}/>
+        <Story />
         <Album selectedSlide={selectedSlide}/>
         <Status totalDistance = {totalDistance}/>
         <Records stravaData = {stravaData.current}/>

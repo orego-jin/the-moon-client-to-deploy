@@ -1,15 +1,15 @@
 
-//color theme == towards the sun
+//color theme = fire
 
 export const main = {
-  body: "#fff",  //pink: #eb71b2
-  text: "#161314", //#161314  darkblue: #10264e
+  body: "#fff", 
+  text: "#161314", 
   themeColor: '#de3525',
-  carouselColor: '#a19982',//'#b1b8b3',
-  footerColor: "#a19982",
-  
-  stopReached: '#FF5733',
-  stopNotReached: '#',
+  carouselColor: '#b8a091',
+  footerColor: "#b8a091",
+  stopReached: '#b8a091',
+  stopNotReached: '#b8a091',
+
   // fontxs: '0.75em',
   fontsm: '.875em',
   fontmd: '1em', // 1em = 16px;

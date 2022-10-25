@@ -16,8 +16,12 @@ import Arrow from '../assets/arrow.png';
 import { Pagination, Navigation, EffectCards } from "swiper";
 
 const Container = styled.div`
-  width: 95vw;
+  width: 90vw;
   height: 75vh;
+
+  @media(min-width: 64rem){
+    height: 70vh;
+  }
 
   .swiper {
     width: 100%;
@@ -45,10 +49,6 @@ const Container = styled.div`
     &:after {
       display: none;
     }
-
-    @media(max-width:64rem){
-   
-    }
   }
 
   .swiper-button-prev {
@@ -63,10 +63,6 @@ const Container = styled.div`
 
     &:after {
       display: none;
-    }
-    
-    @media(max-width:64rem){
-
     }
   }
 `
@@ -97,7 +93,6 @@ const NftBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center; 
-
 `
 
 const Carousel = ({selectedSlide}) => {
@@ -116,10 +111,7 @@ const Carousel = ({selectedSlide}) => {
   }
 
   return(
-    <Container>
-      
-      {/* <button onClick={()=>toSlide()} >button</button> */}
-      
+    <Container>    
       <Swiper
         pagination={
           // {type:'fraction'}
