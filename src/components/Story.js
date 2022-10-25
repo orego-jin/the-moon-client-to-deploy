@@ -92,10 +92,10 @@ const Story = () => {
           <Text>
             One night, P(the big one) and B(the little one) decided to leave their planet - Planet P and go to the moon. <br />
             It was too competitive to live in Planet P and they felt exhausted. <br />
-            They belived in a better future in the moon. <br /><br />
+            They believed in a better future in the moon. <br /><br />
 
             They decided to 'RUN' to the moon. <br />
-            It takes 330km from Planet P to moon and there are 9 stops along the way - each aprated 33km. <br />
+            It takes 330km from Planet P to the moon and there are 9 stops along the way - each aprated 33km. <br />
             Everytime they reach the stop, a NFT will be minted to celebrate their achievement. <br /><br />
 
             Please give a support on their journey!
