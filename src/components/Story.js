@@ -71,9 +71,9 @@ const Title = styled.h2`
 
 const Text = styled.p`
   width: inherit;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 100;
-  line-height: 1.5em;
+  line-height: 1.4em;
   margin: auto;
   @media (max-width: 64rem){
     font-size: ${props => props.theme.fontmd};
@@ -90,12 +90,12 @@ const Story = () => {
         <Title>Story</Title>
         <Box>
           <Text>
-            One night, P(the big one) and B(the little one) decided to leave their planet - Planet P and go to the moon. <br />
-            It was too competitive to live in Planet P and they felt exhausted. <br />
+            One night, P(the big one) and B(the little one) decided to leave their planet - Planet P and go to the moon. 
+            It was too competitive to live in Planet P and they felt exhausted. 
             They believed in a better future in the moon. <br /><br />
 
             They decided to RUN to the moon. <br />
-            It takes 330km from Planet P to the moon and there are 9 stops along the way - each aprated 33km. <br />
+            It takes 330km from Planet P to the moon and there are 9 stops along the way - each aprated 33km. 
             Everytime they reach the stop, a NFT will be minted to celebrate their achievement. <br /><br />
 
             Please give a support on their journey!

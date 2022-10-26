@@ -76,7 +76,7 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: ${props => props.theme.fontmd};
+  font-size: 22px;
 
   @media (max-width: 64rem) {
     width: 90%;
