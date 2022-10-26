@@ -20,6 +20,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative; 
+  margin-bottom: 2.5rem;
 
   @media(max-width:64rem){
     min-height: 60vh;
@@ -36,6 +37,7 @@ const Container = styled.div`
 const TextContainer = styled.div`
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -44,6 +46,7 @@ const TextContainer = styled.div`
 
   @media (max-width: 64rem){
     width: 95%;
+    padding-bottom: 0.5rem;
   }
 `
 
@@ -67,12 +70,14 @@ const Text = styled.p`
   width: inherit;
   font-size: 22px;
   font-weight: 300;
+  line-height: 1.3em;
+ 
   @media (max-width: 64rem){
     font-size: ${props => props.theme.fontmd};
   }
   @media (max-width: 30rem){
     font-size: ${props => props.theme.fontsm};
-  }
+  } 
 `
 
 
@@ -81,6 +86,10 @@ const Album = ({selectedSlide}) => {
     <Section id="album">
       <TextContainer>
         <Title>Album</Title>
+        <Text>
+          A collection of NFTs and records of the journey to each stop. < br />
+          The album shows only the minted NFTs. 
+        </Text>
       </TextContainer>
       <Container>
         <Carousel selectedSlide={selectedSlide}/>

@@ -61,7 +61,7 @@ const Title = styled.h2`
   font-size: ${props => props.theme.fontxxl};
   font-weight: 600;
   padding-top: 1.5rem;
-  // padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 
   @media (max-width: 64rem){
     font-size: ${props => props.theme.fontxl};
@@ -94,7 +94,7 @@ const Story = () => {
             It was too competitive to live in Planet P and they felt exhausted. <br />
             They believed in a better future in the moon. <br /><br />
 
-            They decided to 'RUN' to the moon. <br />
+            They decided to RUN to the moon. <br />
             It takes 330km from Planet P to the moon and there are 9 stops along the way - each aprated 33km. <br />
             Everytime they reach the stop, a NFT will be minted to celebrate their achievement. <br /><br />
 

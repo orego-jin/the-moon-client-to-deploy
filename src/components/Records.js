@@ -76,6 +76,9 @@ const Title = styled.h2`
   font-weight: 600;
   padding-top: 1.5rem;
   // padding-bottom: 1.5rem;
+  span {
+    color: ${props => props.theme.themeColor};
+  }
 
   @media (max-width: 64rem){
     font-size: ${props => props.theme.fontxl};
