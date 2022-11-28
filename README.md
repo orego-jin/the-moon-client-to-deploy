@@ -15,9 +15,9 @@ http://runningtothemoon.netlify.app
 
 ## Dependencies
 
-styled-components
-three.js
-recharts
-swiper
+styled-components </br>
+three.js </br>
+recharts </br>
+swiper </br>
 typewriter-effect
 
